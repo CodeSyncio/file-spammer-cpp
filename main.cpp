@@ -40,8 +40,6 @@ int main() {
       file_out << textinfile << endl;
       file_out.close();}
     
-    
-
   }
   end = clock();
   
