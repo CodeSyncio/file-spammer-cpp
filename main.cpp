@@ -32,19 +32,11 @@ int main() {
   getline(cin, textinfile);
   
   clearscrn();
-  
-  
-  
-  
+
   start = clock();
   
   for (int i = 1; i <= amount; i = i + 1)
     {
-
-    
-
-
-    
 
     file_out.open((filename + "_" + to_string(i) + ".txt"), std::ios_base::out);
     
@@ -56,7 +48,7 @@ int main() {
       file_out.close();}
 
     if(i%100== 0){
-      float curperc = double(i) / double(amount) * 100;
+    float curperc = double(i) / double(amount) * 100;
     clearscrn();
     cout  <<curperc << " %\n";
     }
@@ -64,7 +56,7 @@ int main() {
     
   }
   end = clock();
-  
+  clearscrn();
   cout << "done\n\n";
   cout << "took " << float(end - start) << " miliseconds to finish\n";
   cout << "quitting in 5 seconds...";
