@@ -5,6 +5,11 @@
 #include <unistd.h>
 using namespace std;
 
+void clearscrn(){
+
+  system("cls");
+}
+
 int main() {   
      
   string filename, textinfile;
@@ -12,7 +17,7 @@ int main() {
   fstream file_out;
 
   int amount;
-
+  float perc,curperc;
   clock_t start, end;
   
   cout << "Name of Files?\n";
@@ -25,12 +30,22 @@ int main() {
   
   cout << "text inside of files?\n";
   getline(cin, textinfile);
-
+  
+  clearscrn();
+  
+  
+  
+  
   start = clock();
   
   for (int i = 1; i <= amount; i = i + 1)
     {
+
     
+
+
+    
+
     file_out.open((filename + "_" + to_string(i) + ".txt"), std::ios_base::out);
     
     if (!file_out.is_open()) {
@@ -39,6 +54,13 @@ int main() {
     else {
       file_out << textinfile << endl;
       file_out.close();}
+
+    if(i%100== 0){
+      float curperc = double(i) / double(amount) * 100;
+    clearscrn();
+    cout  <<curperc << " %\n";
+    }
+    
     
     
 
